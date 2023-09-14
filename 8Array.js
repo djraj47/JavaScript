@@ -32,3 +32,20 @@ console.log(newDishes.push("panipuri"));  // return the new lenght of the array
 
 //pop method
 console.log(newDishes.pop());  // return the pop element
+
+
+// forEach method of Array
+
+let dishes1 = ["apple", "mango", "banana", "lichi"];
+
+dishes1.forEach(function (name) {
+    console.log(name);
+});
+
+
+// Objects inside array 
+
+let blocklist = [{ userName: "Raj", resaon: "abusive" }, { userName: "Robin", resaon: "copyright" }];
+for (let i = 0; i < blocklist.length; i++) {
+    console.log(blocklist[i].userName);
+}
