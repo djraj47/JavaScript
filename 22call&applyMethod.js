@@ -18,7 +18,7 @@ let childPlane = {
     Booking: [],
 }
 
-// book method 
+// call method 
 let book = mainPlane.book;
 book.call(childPlane, 564, "robin");
 

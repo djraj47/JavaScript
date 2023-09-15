@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">
+        <p>Hello coders</p>
+    </div>
+    <h1> Welcome to the family</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, eligendi.</p>
+    <h2 class="coderdost">Lorem ipsum dolor sit amet.</h2>
+    <h2 class="coderdost">Lorem ipsum dolor sit amet.</h2>
+    <h3 id="coders">MY passion is coding</h3>
+
+
+    <script>
+        // innertext
+        // retrive and set content in plain text
+        let heading = document.querySelector(".content");
+        heading.innerText = "<p>rajkiran</p>"
+        heading.innerText += "<p>rajkiran</p>"
+        // console.log(heading.innerText);
+
+
+        // innerHTML
+        // it does not ignore spaces
+        let heading1 = document.querySelector("p");
+        heading1.innerHTML = "<p>rajkiran</p>"
+        heading1.innerHTML += "<p>added more rajkiran</p>"
+        // console.log(heading.innerHTML);
+
+
+
+
+
+    </script>
+</body>
+
+</html>
