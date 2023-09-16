@@ -11,8 +11,10 @@
     <a href="https://github.com/djraj47">Djraj</a>
     <div class="content">
         <p>Hello coders</p>
+        <h1>Hello</h1>
+        <a href=""></a>
     </div>
-    <h1> Welcome to the family</h1>
+    <h1 class="main"> Welcome to the family</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, eligendi.</p>
     <h2 class="coderdost">Lorem ipsum dolor sit amet.</h2>
     <h2 class="coderdost">Lorem ipsum dolor sit amet.</h2>
@@ -20,16 +22,18 @@
 
 
     <script>
-        // getting aand setting attributes of an element
-        let coderlink = document.querySelector('a');
-        console.log(coderlink);
-        console.log(coderlink.getAttribute('href'));
 
-        // setting the attribute
-        console.log(coderlink.setAttribute('href', "https://google.com"));
-        coderlink.innerText = "Google";
+        let parentElement = document.querySelector('.content');
+        console.log(parentElement.children);
 
-        
+        // child element
+
+        let childElement = document.querySelector('h1');
+        console.log(childElement.parentElement);
+        console.log(childElement.nextElementSibling);
+        console.log(childElement.previousElementSibling);
+
+
 
 
 

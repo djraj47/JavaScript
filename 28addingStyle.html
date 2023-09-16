@@ -12,7 +12,7 @@
     <div class="content">
         <p>Hello coders</p>
     </div>
-    <h1> Welcome to the family</h1>
+    <h1 class="main"> Welcome to the family</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, eligendi.</p>
     <h2 class="coderdost">Lorem ipsum dolor sit amet.</h2>
     <h2 class="coderdost">Lorem ipsum dolor sit amet.</h2>
@@ -20,16 +20,20 @@
 
 
     <script>
-        // getting aand setting attributes of an element
-        let coderlink = document.querySelector('a');
-        console.log(coderlink);
-        console.log(coderlink.getAttribute('href'));
+        // adding the style
+        let heading = document.querySelector('h1');
+        heading.style.color = "red";
+        heading.style.backgroundColor = "yellow"
 
-        // setting the attribute
-        console.log(coderlink.setAttribute('href', "https://google.com"));
-        coderlink.innerText = "Google";
+        // adding class
+            heading.classList.add('newclass');
+        // removing class
+            heading.classList.remove('newclass');
+        // replace class
+            heading.classList.replace("main","newclass");
 
-        
+
+
 
 
 

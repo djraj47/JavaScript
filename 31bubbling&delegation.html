@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Todolist</h1>
+    <ul>
+        <li>Eat</li>
+        <li>Sleep</li>
+        <li>Code</li>
+        <li>Repeat</li>
+    </ul>
+    <button class="clickme">Click me</button>
+
+    <script>
+        // BUBBLING 
+        const ul = document.querySelector('ul')
+        console.log("inside Ul");
+
+        let elements = document.querySelectorAll('li')
+        elements.forEach(function (element) {
+            element.addEventListener('click', () => {
+                console.log("Inside li");
+            })
+        });
+
+        ul.addEventListener("click", (e) => {
+            // console.log("inside ul")
+            if (e.target.localName == "li")
+                e.target.remove();
+        })
+    </script>
+
+</body>
+
+
+</html>
