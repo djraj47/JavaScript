@@ -7,7 +7,7 @@
 console.log("Hello Coders")
 let firstName = "raj"
 let secondName = "Kiran"
-console.log(firstName,secondName); // prints space automatically between variables
+console.log(firstName, secondName); // prints space automatically between variables
 
 // String concatination 
 
@@ -26,7 +26,7 @@ console.log(firstName[2]);
 
 // String Methods
 
-console.log(firstName.toLowerCase()); 
+console.log(firstName.toLowerCase());
 console.log(firstName.toUpperCase());
 
 console.log(firstName.indexOf("r")); // returns -1 if any char is not present
@@ -49,14 +49,16 @@ console.log(hobbies.lastIndexOf("repeat"));  //last occurence of the charater  &
 console.log(result.includes("eat")); // shows true and false if character is present
 
 // slice method
-console.log(fullname.slice(0,4)); // Excludes last index (0-3)
+console.log(fullname.slice(0, 4)); // Excludes last index (0-3)
 
 // split method
 let favColors = "Brown Blue Black Grey";
 let arrColors = favColors.split(' ');  // converts string into array
 console.log(arrColors);
 
-
+// at method 
+let name1 = "larry";
+console.log(name1.at(-3));
 
 
 
