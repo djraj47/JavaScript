@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <H2>Be part of coder dost</H2>
+    <form action="" class="sign-up-form">
+        <input type="email" name="userEmail" id="email" placeholder="Enter your email">
+        <input type="password" name="userPassword" id="password" placeholder="enter your password">
+        <input type="submit" value="submit">
+    </form>
+    <script>
+// regular expression
+
+        let form = document.querySelector(".sign-up-form")
+        let email = document.querySelector("#email")
+        let password = document.querySelector("#password")
+        let passwordPattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,15}$"
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let passwordValue = password.value;
+            console.log(passwordValue);
+            let result = passwordValue.match(passwordPattern);
+            if (result) {
+                console.log("Your password is strong");
+            }
+            else {
+                console.log("try again");
+            }
+
+            
+        })
+
+
+
+    </script>
+</body>
+
+</html>
