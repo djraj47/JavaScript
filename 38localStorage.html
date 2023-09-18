@@ -20,15 +20,16 @@
         //set item 
         localStorage.setItem("passion", "programming");
         localStorage.setItem("age", 24);
-        
+
         //get item
-        
+        console.log(localStorage.getItem("age"));
+
         //update item
         localStorage.setItem("age", 26) // overwrite the previous value
-        
+
         //remove item 
         localStorage.removeItem("age");
-        
+
         // clear items
         localStorage.clear();
         console.log(localStorage);
