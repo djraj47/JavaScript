@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>localStorage</h1>
+    <p>It is an api provided by browser to store data inside the browser</p>
+
+
+
+
+    <script>
+        // local storage 
+
+        //set item 
+        localStorage.setItem("passion", "programming");
+        localStorage.setItem("age", 24);
+        
+        //get item
+        
+        //update item
+        localStorage.setItem("age", 26) // overwrite the previous value
+        
+        //remove item 
+        localStorage.removeItem("age");
+        
+        // clear items
+        localStorage.clear();
+        console.log(localStorage);
+    </script>
+</body>
+
+</html>
