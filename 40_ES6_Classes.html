@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ES6 Classes</h1>
+
+
+
+
+    <script>
+        // class declarartion
+        class car {
+            constructor(color, model) {
+                this.color = color;
+                this.model = model;
+            }
+            startEngine() {
+                console.log("this is start engine method");
+            }
+        }
+        let honda = new car("Red", 2010)
+        console.log(honda);
+        honda.startEngine();
+
+        car.prototype.model = "Honda";
+        console.log(car.prototype);
+        
+
+        // Important 
+        // -> Classes are not hoisted
+        // -> calsses are also first class citizens ( pass as an arrgument)
+        // -> classes are ececuted in strict mode
+
+
+
+    </script>
+</body>
+
+</html>

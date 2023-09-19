@@ -33,6 +33,33 @@
         // clear items
         localStorage.clear();
         console.log(localStorage);
+
+
+
+        // how to store complex data structure like 
+        // array of objects
+
+        // Ultimately in local storage data store in string foramt 
+        let veichles = [
+            {
+                company: "Honda",
+                model: "2003"
+            },
+            {
+                company: "ferarri",
+                model: "2019"
+            }
+        ]
+        let stringOfVechiles = JSON.stringify(veichles);
+        console.log(stringOfVechiles);
+        localStorage.setItem("veichles", stringOfVechiles)
+        console.log(localStorage);
+
+
+        // get Stored item again in form of object 
+        let storedData = localStorage.getItem("veichles")
+        let objectFormat = JSON.parse(storedData);
+        console.log(objectFormat);
     </script>
 </body>
 

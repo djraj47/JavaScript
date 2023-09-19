@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS in JS</title>
+</head>
+
+<body>
+
+    <h1>OOPS in JavaScript</h1>
+    <p>constructor function and the "new" operator </p>
+    <p>we cannot use arrow function as constructor</p>
+    <p>call constructor function using "new" keyword</p>
+    <pre>
+        1. new (object) created empty initially
+        2. "this" = object
+        3. obejct linked to prototype
+        4. function automatically return object 
+    </pre>
+
+
+    <script>
+        // each object created by "constructor" funtion have an access to all "methods" present inside that "constructor " prototype
+
+        let car = function (name, color) {
+            // instance properties 
+            this.carName = name;
+            this.carColor = color;
+        }
+        let isntance = new car("Ferarri", "red");
+        console.log(isntance);
+
+        // prototypes 
+        car.prototype.getDetails = function () {
+            console.log(`the details of the car are ${this.carName} ${this.carColor}`);
+        }
+        console.log(car.prototype);
+        isntance.getDetails();
+
+        // we can also set properties to prototype 
+        car.prototype.company = "Honda";
+        console.log(car.prototype);
+        //or
+        console.log(isntance.__proto__); // if constructor is not accessable
+
+
+        
+    </script>
+</body>
+
+</html>
