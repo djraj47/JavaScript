@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class bankAccount {
+            constructor(owner, pin) {
+                this.owner = owner;
+                this.pin = pin;
+                this.momvement = [];
+            }
+            getMovement() {
+                return this.getMovement;
+            }
+            deposit(val) {
+                this.momvement.push(val);
+                return this;
+            }
+            withdraw(val) {
+                this.deposit(-val);
+                return this;
+            }
+        }
+        let account = new bankAccount("Raj", 5685);
+        account.deposit(100).withdraw(25).deposit(100);
+        
+        console.log(account.getMovement());
+        console.log(account);
+    </script>
+</body>
+
+</html>

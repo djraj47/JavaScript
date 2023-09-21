@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback HEll</title>
+</head>
+
+<body>
+
+
+    <script>
+        let todos = function (resource, callback) {
+
+            let request = new XMLHttpRequest();
+            console.log(request);
+            request.addEventListener('readystatechange', () => {
+                if (request.readyState === 4 && request.status === 200) {
+                    let data = JSON.parse(request.responseText);
+                    callback(undefined, request.responseText);
+                }
+                else if (request.readyState === 4) {
+                    callback("Data could not fetched", undefined);
+                }
+            })
+
+            request.open("Get", resource);
+            request.send();
+        }
+        // chain of function called as callBack Hell
+        todos("data.json", (error, data) => {
+            if (error) {
+                console.log(error);
+            }
+            else {
+                console.log(data);
+            }
+            todos("lurie.json", (error, data) => {
+                if (error) {
+                    console.log(error);
+                }
+                else {
+                    console.log(data);
+                }
+                todos("carlos.json", (error, data) => {
+                    if (error) {
+                        console.log(error);
+                    }
+                    else {
+                        console.log(data);
+                    }
+                })
+            })
+        });
+
+    </script>
+
+</body>
+
+</html>

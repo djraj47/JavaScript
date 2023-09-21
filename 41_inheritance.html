@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inhertiance</title>
+</head>
+
+<body>
+
+    <script>
+        class car {
+            constructor(color, model) {
+                this.color = color;
+                this.model = model;
+            }
+            startEngine() {
+                console.log("This is stat engine function");
+            }
+        }
+        class bike extends car {
+            constructor(color, model, engine) {
+                super(color, model);
+                this.engine = engine;
+            }
+            bikeMethod() {
+                console.log("this is a method of bike class");
+            }
+
+        }
+        let newBike = new bike("red", 20225,233214);
+        console.log(newBike);
+
+
+
+
+    </script>
+</body>
+
+</html>
